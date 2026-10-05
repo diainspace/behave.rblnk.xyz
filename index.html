@@ -50,15 +50,31 @@ body.antics-on .refusing .runaway-check{animation:check-escape 1s ease-in forwar
 .email-tooltip-label{display:block;font:bold 12px monospace;letter-spacing:.04em}
 .email-tooltip canvas{display:block;width:100%;height:42px;user-select:none;-webkit-user-select:none}
 .email-tooltip-aside{display:block;font:12px/1.5 monospace}
+.facebook-sticker{display:inline-block;transform:rotate(7deg);padding:4px;min-width:44px;min-height:44px}.facebook-sticker img{display:block;width:110px;height:110px;object-fit:contain}.facebook-sticker:focus-visible{outline:3px solid #5850df;outline-offset:5px}
+
+.browser-hint{position:fixed;top:12px;left:12px;right:12px;margin:auto;max-width:540px;background:var(--acid);color:var(--ink);border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:16px 50px 16px 16px;z-index:50;font:14px/1.5 monospace}
+.browser-hint[hidden]{display:none}.browser-hint p{margin:0 0 8px}.browser-hint button{background:none;border:0;cursor:pointer;min-height:44px;text-decoration:underline}.browser-hint .hint-close{position:absolute;right:3px;top:3px;width:44px;font-size:22px;text-decoration:none}
+.email-tease{min-height:44px;min-width:44px;touch-action:manipulation;-webkit-touch-callout:none}.email-tooltip{-webkit-touch-callout:none}
+
+.header-identity{display:flex;align-items:center;flex-wrap:wrap;gap:8px}.header-socials{display:flex;align-items:center;gap:2px}.header-social{display:inline-flex;align-items:center;justify-content:center;width:28px;height:32px;min-width:28px;min-height:32px;padding:0;cursor:pointer}.header-social img{display:block;width:16px;height:16px}.header-email .email-tooltip{bottom:auto;top:calc(100% + 12px);left:auto;right:-55px}.header-socials .email-tease{font-size:inherit;font-weight:normal}.top .header-identity span:last-child{max-width:none;text-align:left}@media(max-width:700px){.top{gap:12px;align-items:flex-start}.header-socials{gap:0}.header-social{width:32px;height:44px;min-width:32px;min-height:44px}.top>span:last-child{max-width:100px}.header-email .email-tooltip{right:-40px}}
+
+/* Generated 4x4 smolder sequence: a separate transparent image asset. */
+.facebook-sticker{position:relative}
+.facebook-sticker::after{content:'';position:absolute;inset:4px;background-image:url('assets/facebook-smolder-sprite.png');background-repeat:no-repeat;background-size:400% 400%;background-position:0 0;opacity:0;pointer-events:none}
+.facebook-sticker:hover::after,.facebook-sticker:focus-visible::after{opacity:1;animation:facebook-smolder 5s steps(1,end) infinite alternate}
+.facebook-sticker:hover img,.facebook-sticker:focus-visible img{opacity:0}
+@keyframes facebook-smolder{0.0000%{background-position:0.0000% 0.0000%}6.6667%{background-position:33.3333% 0.0000%}13.3333%{background-position:66.6667% 0.0000%}20.0000%{background-position:100.0000% 0.0000%}26.6667%{background-position:0.0000% 33.3333%}33.3333%{background-position:33.3333% 33.3333%}40.0000%{background-position:66.6667% 33.3333%}46.6667%{background-position:100.0000% 33.3333%}53.3333%{background-position:0.0000% 66.6667%}60.0000%{background-position:33.3333% 66.6667%}66.6667%{background-position:66.6667% 66.6667%}73.3333%{background-position:100.0000% 66.6667%}80.0000%{background-position:0.0000% 100.0000%}86.6667%{background-position:33.3333% 100.0000%}93.3333%{background-position:66.6667% 100.0000%}100.0000%{background-position:100.0000% 100.0000%}}
 </style>
+<script src="assets/external-links.js" defer></script>
 </head>
 <body class="antics-on">
+<aside class="browser-hint" id="browser-hint" aria-label="Open in your browser" hidden><button class="hint-close" id="browser-hint-close" type="button" aria-label="Dismiss browser hint">×</button><p id="browser-hint-message"></p><button id="browser-hint-open" type="button" hidden>Try opening in Chrome</button></aside>
 <a class="skip" href="#main">Skip to content</a>
-<div class="shell"><header class="top"><span>MY STREET NAME IS DIA / PERSONAL INTERNET</span><span>INDEPENDENTLY OPERATED.</span></header>
-<main id="main"><section class="hero" aria-labelledby="name"><div class="eyebrow">A small corner of a very loud internet.</div><h1 class="name street-name" id="name"><span class="name-intro">My Street Name is</span><span class="name-dia">Dia</span></h1><p class="identity">artist / builder / collector of eccentric ideas</p><p class="current">currently → making things that probably didn't need to exist until I knew I needed them and now I can't live without</p><span class="margin-note" aria-hidden="true">ENDLESS INFINITE FREEDOM.</span><nav class="landing-links" aria-label="Primary destinations"><a class="destination art" href="https://artcollective.live/">ART</a><a class="destination forward" href="https://www.linkedin.com/in/diasommerer/">I BUILD<br>FORWARD</a><a class="destination engine" href="https://rebelengine.xyz/">REBEL ENGINE ↗</a></nav><div class="below"><span>SCROLL. THERE'S MORE. THERE'S ALWAYS MORE.</span><span class="optional-mischief">BEHAVING IS OPTIONAL.</span></div></section>
-<section class="worlds" aria-label="Major worlds"><div class="section-index"><span>01 / THE WORLDS</span><span>Pick a rabbit hole.</span></div><article class="world"><h2><a class="destination" href="https://artcollective.live/">ART</a></h2><p><span class="eyebrow">Paint / make / repeat</span>Things I made instead of behaving.</p></article><article class="world"><h2><a class="destination" href="https://www.linkedin.com/in/diasommerer/">I BUILD<br>FORWARD</a></h2><p><span class="eyebrow">A work in perpetual progress</span>Things I made happen instead of just talking about them.</p></article><article class="world"><h2><a class="destination" href="https://rebelengine.xyz/">REBEL<br>ENGINE</a></h2><p><span class="eyebrow">Some assembly required</span>The Naked Web. Strip Away the Noise</p></article><article class="world"><h2><a class="destination" href="https://stitchyfriends.xyz/">Stitchy<br>Friends.</a></h2><p><span class="eyebrow">Soft. Strange. Small.</span>Little knitted Things™. Obviously.</p></article></section>
+<div class="shell"><header class="top"><div class="header-identity"><span>My Street Name is Dia /</span><nav class="header-socials" aria-label="Social and writing destinations"><a class="header-social" href="https://www.facebook.com/diainspace" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><img src="assets/facebook.svg" width="16" height="16" alt=""></a><a class="header-social" href="https://m.me/diainspace" target="_blank" rel="noopener noreferrer" aria-label="Facebook Messenger" title="Facebook Messenger"><img src="assets/messenger-astronaut.svg" width="16" height="16" alt=""></a><a class="header-social" href="https://www.instagram.com/diasommerer/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><img src="assets/instagram.svg" width="16" height="16" alt=""></a><a class="header-social" href="https://github.com/diainspace/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><img src="assets/github.svg" width="16" height="16" alt=""></a><span class="email-stage header-email"><span class="email-tease header-social" tabindex="0" aria-label="Email address" aria-disabled="true" aria-describedby="header-email-note"><img src="assets/email.svg" width="16" height="16" alt=""></span><span class="email-tooltip" id="header-email-note" role="tooltip" hidden><span class="email-tooltip-label">Here you go!</span><canvas role="img"></canvas><span class="email-tooltip-aside">Can't wait to hear from you!</span></span></span><a class="header-social" href="https://everydaypeople.artcollective.live/" target="_blank" rel="noopener noreferrer" aria-label="Everyday People — writing" title="Everyday People — writing"><img src="assets/writing.svg" width="16" height="16" alt=""></a></nav></div><span>INDEPENDENTLY OPERATED.</span></header>
+<main id="main"><section class="hero" aria-labelledby="name"><div class="eyebrow">A small corner of a very loud internet.</div><h1 class="name street-name" id="name"><span class="name-intro">My Street Name is</span><span class="name-dia">Dia</span></h1><p class="identity">artist / builder / collector of eccentric ideas</p><p class="current">currently → making things that probably didn't need to exist until I knew I needed them and now I can't live without</p><span class="margin-note" aria-hidden="true">ENDLESS INFINITE FREEDOM.</span><nav class="landing-links" aria-label="Primary destinations"><a class="destination art" href="https://artcollective.live/" target="_blank" rel="noopener noreferrer">ART</a><a class="destination forward" href="https://www.linkedin.com/in/diasommerer/" target="_blank" rel="noopener noreferrer">I BUILD<br>FORWARD</a><a class="destination engine" href="https://rebelengine.xyz/" target="_blank" rel="noopener noreferrer">REBEL ENGINE ↗</a></nav><div class="below"><span>SCROLL. THERE'S MORE. THERE'S ALWAYS MORE.</span><span class="optional-mischief">BEHAVING IS OPTIONAL.</span></div></section>
+<section class="worlds" aria-label="Major worlds"><div class="section-index"><span>01 / THE WORLDS</span><span>Pick a rabbit hole.</span></div><article class="world"><h2><a class="destination" href="https://artcollective.live/" target="_blank" rel="noopener noreferrer">ART</a></h2><p><span class="eyebrow">Paint / make / repeat</span>Things I made instead of behaving.</p></article><article class="world"><h2><a class="destination" href="https://www.linkedin.com/in/diasommerer/" target="_blank" rel="noopener noreferrer">I BUILD<br>FORWARD</a></h2><p><span class="eyebrow">A work in perpetual progress</span>Things I made happen instead of just talking about them.</p></article><article class="world"><h2><a class="destination" href="https://rebelengine.xyz/" target="_blank" rel="noopener noreferrer">REBEL<br>ENGINE</a></h2><p><span class="eyebrow">Some assembly required</span>The Naked Web. Strip Away the Noise</p></article><article class="world"><h2><a class="destination" href="https://stitchyfriends.xyz/" target="_blank" rel="noopener noreferrer">Stitchy<br>Friends.</a></h2><p><span class="eyebrow">Soft. Strange. Small.</span>Little knitted Things™. Obviously.</p></article></section>
 <section class="feature" aria-labelledby="featured"><div class="feature-inner"><div class="eyebrow">02 / THE THING AT THE MOMENT</div><h2 id="featured">THIS SPACE<br>HAS PLANS.</h2><p>A place for the latest obsession. New work, a new project, or something that refuses to stay in the drafts.</p><button class="destination" data-destination="Current feature">COMING SOON. PROBABLY.</button></div></section>
-<section class="elsewhere" aria-label="Social and contact destinations"><div class="eyebrow elsewhere-mischief">03 / ELSEWHERE,<br>IF YOU MUST.</div><div class="socials"><div><a class="destination" href="https://github.com/diainspace/">GITHUB ↗</a><p>Evidence that I occasionally know what I'm doing.</p></div><div><a class="destination" href="https://www.instagram.com/diasommerer/">INSTAGRAM ↗</a><p>The visual evidence.</p></div><div><span class="email-stage"><span class="destination email-tease" tabindex="0" aria-disabled="true" aria-describedby="email-note">EMAIL ↗</span><span class="email-tooltip" id="email-note" role="tooltip" hidden><span class="email-tooltip-label">Here you go!</span><canvas id="email-ink" role="img"></canvas><span class="email-tooltip-aside">can't wait to hear from you!</span></span></span><p>Release a message into the void.</p></div></div></section>
+<section class="elsewhere" aria-label="Social and contact destinations"><div class="eyebrow elsewhere-mischief">03 / ELSEWHERE,<br>IF YOU MUST.</div><div class="socials"><div><a class="facebook-sticker" href="https://www.facebook.com/diainspace" aria-label="Dia on Facebook" title="Facebook" target="_blank" rel="noopener noreferrer"><img src="assets/facebook-sticker.png" alt="Worn Facebook sticker with a partly peeled corner" width="110" height="110"></a></div><div><a class="destination" href="https://github.com/diainspace/" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><p>Evidence that I occasionally know what I'm doing.</p></div><div><a class="destination" href="https://www.instagram.com/diasommerer/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><p>The visual evidence.</p></div><div><span class="email-stage"><span class="destination email-tease" tabindex="0" aria-disabled="true" aria-describedby="email-note">EMAIL ↗</span><span class="email-tooltip" id="email-note" role="tooltip" hidden><span class="email-tooltip-label">Here you go!</span><canvas id="email-ink" role="img"></canvas><span class="email-tooltip-aside">Can't wait to hear from you!</span></span></span><p>Release a message into the void.</p></div></div></section>
 <section class="writing" aria-labelledby="post-title"><div class="section-index"><span>04 / WORDS ESCAPED</span></div><div class="writing-layout"><div><p class="blog-label" id="blog-label">I WROTE A THING.</p><span class="sample">Writing is coming soon. These are placeholder previews.</span></div><div><div id="post" aria-live="polite" aria-atomic="true"><h2 id="post-title">The web is full of garbage.</h2><p class="excerpt" id="excerpt">Naturally, I have thoughts about this. And apparently, a willingness to make it everyone else's problem.</p></div><button class="destination read" data-destination="Blog post">READ IT ↗</button><div class="navigation" aria-label="Sample post navigation"><button class="wander" id="previous" aria-label="Previous sample post">← PREVIOUSLY</button><span class="count" id="count">01 / 03</span><button class="wander" id="next" aria-label="Next sample post">SOMETHING ELSE<br>I SAID →</button></div><div class="antics-switch"><label><span class="checkbox-wrap"><input id="disable-antics" type="checkbox"><span class="runaway-check" aria-hidden="true">✓</span></span> Disable antics</label><span class="switch-response" id="switch-response" role="status"></span></div></div></div></section></main>
 <footer><span>© <span id="year">2026</span> My Street Name is Dia<br>built by dia. because apparently this needed doing.</span><span><strong>IT'S A PAGE OF LINKS. CALM DOWN.</strong><br>No newsletter. No popup. No soul required.</span></footer></div><div class="notice" role="status" id="notice"></div>
 <script>
@@ -68,7 +84,7 @@ const samples=[{label:'I WROTE A THING.',title:'The web is full of garbage.',exc
 let selected=0,noticeTimer;
 function showPost(direction){selected=(selected+direction+samples.length)%samples.length;const post=samples[selected];document.getElementById('blog-label').textContent=post.label;document.getElementById('post-title').textContent=post.title;document.getElementById('excerpt').textContent=post.excerpt;document.getElementById('count').textContent=String(selected+1).padStart(2,'0')+' / '+String(samples.length).padStart(2,'0');}
 document.getElementById('previous').addEventListener('click',()=>showPost(-1));document.getElementById('next').addEventListener('click',()=>showPost(1));
-document.querySelectorAll('[data-destination]').forEach(control=>control.addEventListener('click',()=>{const notice=document.getElementById('notice');if(control.dataset.destination==='Blog post'&&samples[selected].url){window.location.assign(samples[selected].url);return;}notice.textContent=control.dataset.destination==='Current feature'?"I'm getting to it.":control.dataset.destination+' — destination to be added.';clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>notice.textContent='',3000);}));
+document.querySelectorAll('[data-destination]').forEach(control=>control.addEventListener('click',()=>{const notice=document.getElementById('notice');if(control.dataset.destination==='Blog post'&&samples[selected].url){window.openExternalDestination(samples[selected].url);return;}notice.textContent=control.dataset.destination==='Current feature'?"I'm getting to it.":control.dataset.destination+' — destination to be added.';clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>notice.textContent='',3000);}));
 document.getElementById('year').textContent=new Date().getFullYear();
 const disableAntics=document.getElementById('disable-antics');
 let checkboxTimer,checkboxClicks=0;
@@ -166,31 +182,46 @@ window.addEventListener('resize',resetMischief);
 // Source obfuscation, not encryption. Canvas makes the displayed text nonselectable.
 const emailGlyphs=[60, 57, 37, 40, 61, 44, 40, 39, 48, 62, 40, 51, 44, 9, 46, 36, 40, 32, 37, 103, 42, 38, 36];
 const emailAddress=emailGlyphs.map(value=>String.fromCharCode(value^73)).join('');
-const emailTrigger=document.querySelector('.email-tease');
-const emailTooltip=document.querySelector('.email-tooltip');
-const emailInk=document.getElementById('email-ink');
+function initEmailStage(stage){
+const emailTrigger=stage.querySelector('.email-tease');
+const emailTooltip=stage.querySelector('.email-tooltip');
+const emailInk=stage.querySelector('canvas');
 const emailContext=emailInk.getContext('2d');
 emailInk.width=550;emailInk.height=84;
 emailContext.font='bold 30px monospace';emailContext.fillStyle='#171717';
 emailContext.fillText(emailAddress,0,52);
 emailInk.setAttribute('aria-label',emailAddress);
-let emailDismissed=false;
+let emailDismissed=false,emailTouch=false;
 function showEmail(){if(!emailDismissed)emailTooltip.hidden=false;}
 function hideEmail(){emailTooltip.hidden=true;emailDismissed=true;}
-emailTrigger.addEventListener('pointerenter',showEmail);
-emailTrigger.addEventListener('focus',showEmail);
-emailTrigger.addEventListener('pointerleave',hideEmail);
+emailTrigger.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse')showEmail();});
+emailTrigger.addEventListener('focus',()=>{if(!emailTouch)showEmail();});
+emailTrigger.addEventListener('pointerleave',event=>{if(event.pointerType==='mouse')hideEmail();});
 emailTrigger.addEventListener('blur',()=>{hideEmail();emailDismissed=false;});
-emailTrigger.addEventListener('pointerdown',event=>{event.preventDefault();hideEmail();});
-emailTrigger.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '||event.key==='Escape'){event.preventDefault();hideEmail();}});
-emailTooltip.addEventListener('pointerenter',hideEmail);
+emailTrigger.addEventListener('pointerdown',event=>{
+ emailTouch=event.pointerType==='touch'||event.pointerType==='pen';
+ event.preventDefault();
+ if(!emailTouch)hideEmail();
+});
+emailTrigger.addEventListener('click',event=>{
+ event.preventDefault();
+ if(!emailTouch)return;
+ if(emailTooltip.hidden){emailDismissed=false;showEmail();}else hideEmail();
+});
+emailTrigger.addEventListener('keydown',event=>{
+ if(event.key==='Enter'||event.key===' '){event.preventDefault();emailTouch=false;if(emailTooltip.hidden){emailDismissed=false;showEmail();}else hideEmail();}
+ if(event.key==='Escape'){event.preventDefault();hideEmail();}
+});
+emailTooltip.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse')hideEmail();});
 emailTooltip.addEventListener('pointerdown',hideEmail);
-document.querySelector('.email-stage').addEventListener('pointerleave',()=>{hideEmail();emailDismissed=false;});
+stage.addEventListener('pointerleave',event=>{if(event.pointerType==='mouse'){hideEmail();emailDismissed=false;}});
+document.addEventListener('pointerdown',event=>{if(!emailTooltip.hidden&&!emailTrigger.contains(event.target))hideEmail();},true);
 for(const eventName of ['copy','cut','contextmenu','selectstart','dragstart']){
  document.addEventListener(eventName,event=>{if(!emailTooltip.hidden){event.preventDefault();hideEmail();}},true);
 }
 document.addEventListener('keydown',event=>{if(!emailTooltip.hidden&&((event.ctrlKey||event.metaKey)&&['c','x','a'].includes(event.key.toLowerCase())||event.key==='Escape')){event.preventDefault();hideEmail();}},true);
-
+}
+document.querySelectorAll('.email-stage').forEach(initEmailStage);
 
 async function loadBlogFeed(){
  if(!destinations.blogFeed)return;
