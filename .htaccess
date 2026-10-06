@@ -1,0 +1,2 @@
+# Friendly Spotify URL. Use 302 so the destination can change later.
+RedirectMatch 302 ^/spotify/diainspace/?$ https://open.spotify.com/user/dianenar
